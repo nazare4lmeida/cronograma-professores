@@ -1,0 +1,171 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --text-light: #6b7280;
+  --accent: #1d4ed8;
+  --radius: 12px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f3f4f6;
+  --text-light: #9ca3af;
+  --accent: #60a5fa;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif; /* Fonte mais moderna */
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+header {
+  padding: 12px 30px;
+  background: var(--card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky; /* O menu fica parado no topo ao rolar */
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+header h1 span {
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 1px solid #ddd;
+  padding-left: 15px;
+}
+
+/* Estilo específico para o botão de exportar */
+.btn-export {
+  background: #10b981; /* Verde esmeralda para destacar ação positiva */
+  color: white;
+  border: none;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-export:hover {
+  background: #059669;
+}
+
+.btn-icon {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+}
+
+/* Dark mode adjustment */
+body.dark .actions {
+  border-left-color: #334155;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+/* Melhorando inputs e botões */
+select, button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+main {
+  max-width: 900px; /* Centraliza o conteúdo e evita linhas muito longas */
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Card de Aula Estilizado */
+.aula {
+  background: var(--card);
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+}
+
+.aula:hover {
+  transform: scale(1.01);
+}
+.aula small {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+}
+
+.aula ul {
+    padding-left: 20px;
+}
+
+.aula h3 {
+    color: var(--text);
+}
+
+/* Estilo para o campo de notas */
+textarea {
+  width: 100%;
+  box-sizing: border-box; /* Evita que o padding "estoure" a largura */
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: var(--bg);
+  color: var(--text);
+  resize: vertical; /* Permite aumentar altura mas não largura */
+}
+
+/* Dark mode específico para o textarea */
+body.dark textarea {
+  border-color: #334155;
+}

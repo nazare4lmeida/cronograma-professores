@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronogramas Presenciais - Geração Tech 3.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-area">
+        <h1>Cronogramas <span>Presenciais</span> - Geração Tech 3.0</h1>
+    </div>
+
+    <div class="controls">
+        <select id="cursoSelect">
+            <option value="ia_gen">IA Generativa</option>
+            <option value="iasp">IA + Soft Skills</option>
+        </select>
+
+        <select id="turmaSelect">
+            <option value="terqui">Terça e Quinta</option>
+            <option value="segqua">Segunda e Quarta</option>
+        </select>
+
+        <div class="actions">
+            <button onclick="exportarAnotacoes()" class="btn-export">
+                <span>📥</span> Exportar
+            </button>
+            <button id="themeToggle" class="btn-icon">🌙</button>
+        </div>
+    </div>
+</header>
+
+<main id="cronograma"></main>
+
+<script src="cronograma.js"></script>
+<script src="script.js"></script>
+<script src="export.js"></script>
+</body>
+</html>
