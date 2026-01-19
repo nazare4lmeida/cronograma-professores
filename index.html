@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cronogramas Presenciais - Geração Tech 3.0</title>
+    <title>Cronogramas Geração Tech 3.0</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <div class="logo-area">
-        <h1>Cronogramas <span>Presenciais</span> - Geração Tech 3.0</h1>
-    </div>
-
-    <div class="controls">
-        <select id="cursoSelect">
-            <option value="ia_gen">IA Generativa</option>
-            <option value="iasp">IA + Soft Skills</option>
-        </select>
-
-        <select id="turmaSelect">
-            <option value="terqui">Terça e Quinta</option>
-            <option value="segqua">Segunda e Quarta</option>
-        </select>
-
-        <div class="actions">
-            <button onclick="exportarAnotacoes()" class="btn-export">
-                <span>📥</span> Exportar
-            </button>
-            <button id="themeToggle" class="btn-icon">🌙</button>
+    <header>
+        <div class="brand">
+            <h1>Cronogramas <span>Formações de IA</span></h1>
+            <div class="badge">Geração Tech 3.0</div>
         </div>
-    </div>
-</header>
-
-<main id="cronograma"></main>
-
-<script src="cronograma.js"></script>
-<script src="script.js"></script>
-<script src="export.js"></script>
+        <div class="nav-actions">
+            <div class="filter-group">
+                <select id="cursoSelect">
+                    <option value="ia_gen">IA Generativa</option>
+                    <option value="iasp">IA + Soft Skills</option>
+                </select>
+                <select id="turmaSelect">
+                    <option value="terqui">Terça e Quinta</option>
+                    <option value="segqua">Segunda e Quarta</option>
+                </select>
+            </div>
+            <div class="tool-group">
+                <button onclick="exportarAnotacoes()" class="btn-primary" id="btnExport">
+                    <span id="exportIconContainer"></span>
+                    Exportar Tudo
+                </button>
+                <button id="themeToggle" class="btn-secondary"></button>
+            </div>
+        </div>
+    </header>
+    <main id="cronograma" class="content-grid"></main>
+    
+    <script src="cronograma.js"></script>
+    <script src="script.js"></script>
+    <script src="export.js"></script>
 </body>
 </html>

@@ -1,20 +1,39 @@
-# 📚 Cronogramas Presenciais – Geração Tech
+Sistema de Gestão de Cronogramas – Geração Tech 3.0
+O Gerenciador de Cronogramas Interativos é uma solução front-end desenvolvida para otimizar o fluxo de trabalho de instrutores dos cursos de Inteligência Artificial Generativa e IA + Soft Skills (IASP). A plataforma centraliza o planejamento pedagógico e a coleta de evidências de aula em um ambiente dinâmico e persistente.
 
-Este é um portal interativo desenvolvido para facilitar a gestão de aulas e anotações dos professores dos cursos de **IA Generativa** e **IA + Soft Skills (IASP)**.
+Arquitetura de Funcionalidades
+Gestão Dinâmica de Conteúdo
+Segmentação por Matriz: Filtros integrados para seleção de cursos e turmas baseados em calendários específicos (Terça/Quinta e Segunda/Quarta).
 
-## 🚀 Funcionalidades
-* **Seleção de Cronograma**: Escolha entre diferentes cursos e turmas (Terça/Quinta ou Segunda/Quarta).
-* **Anotações Automáticas**: Cada aula possui um campo de anotações que salva o texto automaticamente no seu navegador. Você pode fechar o site e voltar depois, e suas notas estarão lá.
-* **Modo Escuro**: Interface adaptável para melhor conforto visual.
-* **Exportação**: Baixe todas as suas anotações em um arquivo `.txt` para relatórios ou registros pessoais.
+Roadmaps Editáveis: Módulo que permite ao docente ajustar o roteiro de conteúdo e as atividades práticas diretamente na interface, com persistência de dados.
 
-## 🛠️ Como usar
-1. Selecione o **Curso** e a **Turma** no menu superior.
-2. O cronograma será carregado com as datas, módulos e sugestões de tópicos.
-3. Digite suas observações no campo de texto de cada aula.
-4. Ao final do período ou sempre que desejar, clique em **📥 Exportar** para baixar suas notas.
+Persistência e Segurança de Dados
+Auto-save via LocalStorage: Implementação de armazenamento local que garante a integridade das anotações e customizações mesmo após o fechamento da sessão ou reinicialização do navegador.
 
-## 💻 Tecnologias
-* HTML5 / CSS3 (Design Responsivo)
-* JavaScript Vanilla (Manipulação de DOM e LocalStorage)
-* GitHub Pages (Hospedagem)
+Segregação de Dados: Separação clara entre o material didático oficial e as anotações privadas do professor através de chaves únicas de armazenamento.
+
+Interface e Experiência do Usuário (UX)
+Design Glassmorphism: Interface moderna desenvolvida com foco em legibilidade, utilizando a tipografia Plus Jakarta Sans e hierarquia visual avançada.
+
+Dark Mode Nativo: Sistema de temas sóbrios baseado em variáveis CSS para redução da fadiga visual em períodos prolongados de uso.
+
+Exportação e Relatórios
+Data Export: Módulo capaz de consolidar todas as entradas do LocalStorage em arquivos de texto (.txt) estruturados, facilitando a entrega de relatórios para a coordenação.
+
+Estrutura Técnica
+O projeto foi construído utilizando os pilares do desenvolvimento web moderno, priorizando a ausência de dependências externas para maximizar o desempenho:
+
+Linguagem: JavaScript Vanilla (ES6+) para manipulação assíncrona do DOM.
+
+Estilização: CSS3 avançado com sistema de variáveis e Flexbox/Grid Layout para responsividade total.
+
+Estrutura: HTML5 semântico focado em acessibilidade e SEO técnico.
+
+Procedimentos de Operação
+Configuração de Sessão: Utilize os seletores no cabeçalho para definir o curso e o período letivo correspondente.
+
+Customização Pedagógica: No campo "Editar Material", ajuste o roadmap de conteúdo conforme a necessidade da turma.
+
+Registro de Evidências: Utilize o bloco de notas privativo para registrar o progresso dos alunos e observações de aula.
+
+Consolidação: Acione o comando de exportação para gerar o registro documental das atividades realizadas.
