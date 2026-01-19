@@ -10,44 +10,48 @@ O sistema foi projetado com base em três pilares fundamentais:
 
 1️⃣ Gestão Dinâmica de Conteúdo
 
-Segmentação por Matriz
+Segmentação por Matriz:
+
 Filtros inteligentes que permitem alternar instantaneamente entre cursos e turmas, considerando calendários específicos:
 
 Terça / Quinta
 
 Segunda / Quarta
 
-Editor de Ementas
+Editor de Ementas:
+
 Módulo integrado que possibilita ao docente:
 
 Ajustar o roteiro de conteúdo
 
 Atualizar atividades práticas em tempo real
 
-Visualização Modular
+Visualização Modular:
+
 Uso de componentes expansíveis para exibição de:
 
-Roadmaps
-
-Objetivos
-Sem comprometer a clareza da interface.
+Roadmaps objetivos sem comprometer a clareza da interface.
 
 2️⃣ Persistência e Segurança
 
-Auto-save via LocalStorage
+Auto-save via LocalStorage:
+
 Mecanismo automático de salvamento que garante a integridade das anotações mesmo após o fechamento do navegador.
 
-Segregação de Dados
+Segregação de Dados:
+
 Separação técnica entre:
 
 Conteúdo programático oficial
 
 Anotações privadas do instrutor
+
 Utilizando chaves exclusivas de armazenamento.
 
 3️⃣ Experiência do Usuário (UX)
 
-Design em Glassmorphism
+Design em Glassmorphism:
+
 Interface moderna com efeitos de transparência, sombras suaves e tipografia avançada para maior legibilidade.
 
 Sistema de Temas Sóbrios
@@ -75,7 +79,6 @@ Redução da fadiga visual
 - **Interface:**  
   HTML5 Semântico  
   Estruturação adequada do conteúdo, seguindo boas práticas de acessibilidade.
-
 
 🔄 Fluxo de Operação
 
