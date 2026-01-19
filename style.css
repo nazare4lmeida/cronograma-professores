@@ -24,9 +24,9 @@ body.dark {
     --header-bg: rgba(15, 23, 42, 0.9);
     --card: #1e293b; 
     --text-main: #f1f5f9e8;
-    --text-muted: #658597;
-    --accent: #0e4b43; 
-    --accent-hover: #103d36;
+    --text-muted: #759aaf;
+    --accent: #146459; 
+    --accent-hover: #185c52;
     --accent-glow: rgba(45, 212, 190, 0.137);
     --border: #2c3747;
     --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
@@ -245,7 +245,7 @@ select:hover {
 }
 
 .aula-header small {
-    color: var(--accent);
+    color: var(--text-muted);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1.2px;
@@ -279,7 +279,7 @@ select:hover {
 
 .editor-box summary {
     font-weight: 700;
-    color: var(--accent);
+    color: var(--text-muted);
     cursor: pointer;
     font-size: 0.9rem;
     outline: none;
@@ -325,7 +325,7 @@ select:hover {
     font-size: 0.85rem;
     font-weight: 800;
     margin-top: 30px;
-    color: var(--success);
+    color: var(--text-muted);
     text-transform: uppercase;
     display: flex;
     align-items: center;
