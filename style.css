@@ -42,7 +42,66 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Header com Efeito Glassmorphism */
+/* --- SEÇÃO DE LOGIN: LAYOUT CENTRALIZADO RESTRUTURADO --- */
+.login-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg);
+    padding: 20px;
+}
+
+.login-card {
+    background: var(--card);
+    padding: 48px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 420px; /* Largura controlada para manter o aspecto clássico */
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.login-card p {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    font-size: 0.95rem;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#loginForm input {
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+#loginForm input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+/* Ajuste no botão de login para preencher o card adequadamente */
+#loginForm .btn-primary {
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    padding: 14px;
+    box-shadow: none; /* Mantendo discreto como você pediu */
+}
+
+/* --- CONTEÚDO PROTEGIDO --- */
 header {
     display: flex;
     justify-content: space-between;
@@ -84,7 +143,6 @@ header {
     margin-top: 4px;
 }
 
-/* Controles e Botões */
 .nav-actions {
     display: flex;
     gap: 24px;
@@ -161,14 +219,12 @@ select:hover {
     background: var(--bg);
 }
 
-/* Grid de Conteúdo */
 .content-grid {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* Card de Aula Estilizado */
 .aula {
     background: var(--card);
     border: 1px solid var(--border);
@@ -213,7 +269,6 @@ select:hover {
     color: var(--text-muted);
 }
 
-/* Editor de Material Didático */
 .editor-box {
     background: var(--bg);
     border-radius: 18px;
@@ -266,7 +321,6 @@ select:hover {
     outline: none;
 }
 
-/* Bloco de Notas Pessoais */
 .section-title {
     font-size: 0.85rem;
     font-weight: 800;
@@ -300,7 +354,7 @@ select:hover {
     box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
 }
 
-/* Botões de Salvar */
+/* Botões de Salvar Dinâmicos */
 .btn-save, .btn-save-notes {
     margin-top: 10px;
     padding: 10px 20px;
@@ -312,10 +366,13 @@ select:hover {
     font-weight: 700;
     font-size: 0.85rem;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 10px var(--accent-glow);
-    width: 30%;
+    width: 220px; /* Largura controlada e centralizada */
     display: block;
     margin: 20px auto 0 auto;
+}
+
+body.dark .btn-save, body.dark .btn-save-notes {
+    box-shadow: none;
 }
 
 .btn-save:hover, .btn-save-notes:hover {
@@ -326,10 +383,9 @@ select:hover {
 .btn-save-notes {
     background-color: var(--success);
     width: fit-content;
-    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
 }
 
-/* Estilização da Barra de Rolagem */
+/* Barra de Rolagem */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -343,10 +399,6 @@ select:hover {
     border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: var(--text-muted);
-}
-
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 600px) {
     header {
@@ -355,35 +407,28 @@ select:hover {
         align-items: flex-start;
         gap: 20px;
     }
-
     .nav-actions {
         width: 100%;
         flex-direction: column;
         align-items: stretch;
     }
-
     .filter-group, .tool-group {
         width: 100%;
         justify-content: space-between;
     }
-
     .tool-group {
         border-left: none;
         padding-left: 0;
         border-top: 1px solid var(--border);
         padding-top: 16px;
     }
-
     .content-grid {
         padding: 10px;
-        margin-top: 20px;
     }
-
-    .aula {
-        padding: 24px;
+    .login-card {
+        padding: 30px 20px;
     }
-
-    .brand h1 {
-        font-size: 1.4rem;
+    .btn-save, .btn-save-notes {
+        width: 100%;
     }
 }
