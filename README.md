@@ -1,39 +1,47 @@
-Sistema de Gestão de Cronogramas – Geração Tech 3.0
-O Gerenciador de Cronogramas Interativos é uma solução front-end desenvolvida para otimizar o fluxo de trabalho de instrutores dos cursos de Inteligência Artificial Generativa e IA + Soft Skills (IASP). A plataforma centraliza o planejamento pedagógico e a coleta de evidências de aula em um ambiente dinâmico e persistente.
+Sistema de Gestão de Cronogramas – Geração Tech 3.0O 
 
-Arquitetura de Funcionalidades
+Gerenciador de Cronogramas Interativos é uma plataforma front-end desenvolvida para otimizar o planejamento pedagógico e a coleta de evidências dos instrutores dos cursos de Inteligência Artificial Generativa e IA + Soft Skills (IASP). A solução substitui registros manuais por um ambiente digital persistente, dinâmico e focado em produtividade.
+
+1. Arquitetura de FuncionalidadesO sistema foi projetado sob três pilares fundamentais:
+
 Gestão Dinâmica de Conteúdo
-Segmentação por Matriz: Filtros integrados para seleção de cursos e turmas baseados em calendários específicos (Terça/Quinta e Segunda/Quarta).
 
-Roadmaps Editáveis: Módulo que permite ao docente ajustar o roteiro de conteúdo e as atividades práticas diretamente na interface, com persistência de dados.
+Segmentação por Matriz: Filtros inteligentes que alternam instantaneamente entre cursos e turmas baseados em calendários específicos (Terça/Quinta e Segunda/Quarta).
 
-Persistência e Segurança de Dados
-Auto-save via LocalStorage: Implementação de armazenamento local que garante a integridade das anotações e customizações mesmo após o fechamento da sessão ou reinicialização do navegador.
+Editor de Ementas: Módulo integrado que permite ao docente ajustar o roteiro de conteúdo e as atividades práticas em tempo real.
 
-Segregação de Dados: Separação clara entre o material didático oficial e as anotações privadas do professor através de chaves únicas de armazenamento.
+Visualização Modular: Uso de componentes expansíveis para exibir Roadmaps e Objetivos sem comprometer a clareza da interface.
 
-Interface e Experiência do Usuário (UX)
-Design Glassmorphism: Interface moderna desenvolvida com foco em legibilidade, utilizando a tipografia Plus Jakarta Sans e hierarquia visual avançada.
+Persistência e SegurançaAuto-save via LocalStorage: Mecanismo que garante a integridade das anotações mesmo após o fechamento do navegador, eliminando o risco de perda de dados.
 
-Dark Mode Nativo: Sistema de temas sóbrios baseado em variáveis CSS para redução da fadiga visual em períodos prolongados de uso.
+Segregação de Dados: Separação técnica entre o conteúdo programático oficial e as anotações privadas do professor através de chaves exclusivas de armazenamento.
 
-Exportação e Relatórios
-Data Export: Módulo capaz de consolidar todas as entradas do LocalStorage em arquivos de texto (.txt) estruturados, facilitando a entrega de relatórios para a coordenação.
+Experiência do Usuário (UX)Design Glassmorphism: Interface moderna baseada em efeitos de transparência e tipografia avançada para maior legibilidade.
 
-Estrutura Técnica
-O projeto foi construído utilizando os pilares do desenvolvimento web moderno, priorizando a ausência de dependências externas para maximizar o desempenho:
+Sistema de Temas Sóbrios: Dark Mode nativo otimizado para turnos prolongados, reduzindo a fadiga visual.
 
-Linguagem: JavaScript Vanilla (ES6+) para manipulação assíncrona do DOM.
+2. Especificações Técnicas
 
-Estilização: CSS3 avançado com sistema de variáveis e Flexbox/Grid Layout para responsividade total.
+Componente,Tecnologia,Finalidade
+Linguagem Base,JavaScript Vanilla (ES6+),Lógica de processamento e manipulação de DOM.
+Estilização,CSS3 Moderno (Variables/Flex),Interface responsiva e sistema de temas dinâmicos.
+Persistência,Web Storage API,Armazenamento local de dados e customizações.
+Interface,HTML5 Semântico,Estruturação de dados e padrões de acessibilidade.
 
-Estrutura: HTML5 semântico focado em acessibilidade e SEO técnico.
+3. Fluxo de Operação
 
-Procedimentos de Operação
-Configuração de Sessão: Utilize os seletores no cabeçalho para definir o curso e o período letivo correspondente.
+Configuração de Período: Selecione o curso e a turma correspondente no cabeçalho da aplicação.
 
-Customização Pedagógica: No campo "Editar Material", ajuste o roadmap de conteúdo conforme a necessidade da turma.
+Preparação Pedagógica: Acesse a seção "Ementa Completa" para revisar ou customizar o roteiro da aula.
 
-Registro de Evidências: Utilize o bloco de notas privativo para registrar o progresso dos alunos e observações de aula.
+Registro de Evidências: Utilize o campo de anotações privadas para registrar o progresso e observações técnicas.
 
-Consolidação: Acione o comando de exportação para gerar o registro documental das atividades realizadas.
+Consolidação de Relatório: Acione o comando de exportação para baixar o registro documental estruturado em formato .txt.
+
+4. Estrutura do Projeto
+
+index.html: Ponto de entrada e estrutura semântica.
+style.css: Motor de estilização e definições de tema.
+cronograma.js: Base de dados estruturada e lógica de datas.
+script.js: Controlador de eventos e persistência de dados.
+export.js: Módulo de geração de relatórios externos.
