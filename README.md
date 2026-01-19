@@ -1,47 +1,106 @@
-Sistema de Gestão de Cronogramas – Geração Tech 3.0O 
+📘 Sistema de Gestão de Cronogramas – Geração Tech 3.0
 
-Gerenciador de Cronogramas Interativos é uma plataforma front-end desenvolvida para otimizar o planejamento pedagógico e a coleta de evidências dos instrutores dos cursos de Inteligência Artificial Generativa e IA + Soft Skills (IASP). A solução substitui registros manuais por um ambiente digital persistente, dinâmico e focado em produtividade.
+O Gerenciador de Cronogramas é uma plataforma front-end desenvolvida para otimizar o planejamento pedagógico e a coleta de evidências dos instrutores dos cursos de Inteligência Artificial Generativa e IA + Soft Skills (IASP).
 
-1. Arquitetura de FuncionalidadesO sistema foi projetado sob três pilares fundamentais:
+A solução substitui registros manuais por um ambiente digital, persistente, dinâmico e orientado à produtividade, garantindo organização, segurança das informações e melhor experiência de uso para os docentes.
 
-Gestão Dinâmica de Conteúdo
+🧩 Arquitetura de Funcionalidades
 
-Segmentação por Matriz: Filtros inteligentes que alternam instantaneamente entre cursos e turmas baseados em calendários específicos (Terça/Quinta e Segunda/Quarta).
+O sistema foi projetado com base em três pilares fundamentais:
 
-Editor de Ementas: Módulo integrado que permite ao docente ajustar o roteiro de conteúdo e as atividades práticas em tempo real.
+1️⃣ Gestão Dinâmica de Conteúdo
 
-Visualização Modular: Uso de componentes expansíveis para exibir Roadmaps e Objetivos sem comprometer a clareza da interface.
+Segmentação por Matriz
+Filtros inteligentes que permitem alternar instantaneamente entre cursos e turmas, considerando calendários específicos:
 
-Persistência e SegurançaAuto-save via LocalStorage: Mecanismo que garante a integridade das anotações mesmo após o fechamento do navegador, eliminando o risco de perda de dados.
+Terça / Quinta
 
-Segregação de Dados: Separação técnica entre o conteúdo programático oficial e as anotações privadas do professor através de chaves exclusivas de armazenamento.
+Segunda / Quarta
 
-Experiência do Usuário (UX)Design Glassmorphism: Interface moderna baseada em efeitos de transparência e tipografia avançada para maior legibilidade.
+Editor de Ementas
+Módulo integrado que possibilita ao docente:
 
-Sistema de Temas Sóbrios: Dark Mode nativo otimizado para turnos prolongados, reduzindo a fadiga visual.
+Ajustar o roteiro de conteúdo
 
-2. Especificações Técnicas
+Atualizar atividades práticas em tempo real
 
-Componente,Tecnologia,Finalidade
-Linguagem Base,JavaScript Vanilla (ES6+),Lógica de processamento e manipulação de DOM.
-Estilização,CSS3 Moderno (Variables/Flex),Interface responsiva e sistema de temas dinâmicos.
-Persistência,Web Storage API,Armazenamento local de dados e customizações.
-Interface,HTML5 Semântico,Estruturação de dados e padrões de acessibilidade.
+Visualização Modular
+Uso de componentes expansíveis para exibição de:
 
-3. Fluxo de Operação
+Roadmaps
 
-Configuração de Período: Selecione o curso e a turma correspondente no cabeçalho da aplicação.
+Objetivos
+Sem comprometer a clareza da interface.
 
-Preparação Pedagógica: Acesse a seção "Ementa Completa" para revisar ou customizar o roteiro da aula.
+2️⃣ Persistência e Segurança
 
-Registro de Evidências: Utilize o campo de anotações privadas para registrar o progresso e observações técnicas.
+Auto-save via LocalStorage
+Mecanismo automático de salvamento que garante a integridade das anotações mesmo após o fechamento do navegador.
 
-Consolidação de Relatório: Acione o comando de exportação para baixar o registro documental estruturado em formato .txt.
+Segregação de Dados
+Separação técnica entre:
 
-4. Estrutura do Projeto
+Conteúdo programático oficial
 
-index.html: Ponto de entrada e estrutura semântica.
-style.css: Motor de estilização e definições de tema.
-cronograma.js: Base de dados estruturada e lógica de datas.
-script.js: Controlador de eventos e persistência de dados.
-export.js: Módulo de geração de relatórios externos.
+Anotações privadas do instrutor
+Utilizando chaves exclusivas de armazenamento.
+
+3️⃣ Experiência do Usuário (UX)
+
+Design em Glassmorphism
+Interface moderna com efeitos de transparência, sombras suaves e tipografia avançada para maior legibilidade.
+
+Sistema de Temas Sóbrios
+
+Dark Mode nativo
+
+Otimizado para longos períodos de uso
+
+Redução da fadiga visual
+
+## ⚙️ Especificações Técnicas
+
+- **Linguagem Base:**  
+  JavaScript Vanilla (ES6+)  
+  Responsável pela lógica de processamento e manipulação do DOM.
+
+- **Estilização:**  
+  CSS3 Moderno (Variables e Flexbox)  
+  Utilizado para construção da interface responsiva e do sistema de temas dinâmicos.
+
+- **Persistência:**  
+  Web Storage API (LocalStorage)  
+  Armazenamento local de dados, preferências e anotações do instrutor.
+
+- **Interface:**  
+  HTML5 Semântico  
+  Estruturação adequada do conteúdo, seguindo boas práticas de acessibilidade.
+
+
+🔄 Fluxo de Operação
+
+Configuração de Período
+Selecione o curso e a turma correspondente no cabeçalho da aplicação.
+
+Preparação Pedagógica
+Acesse a seção “Ementa Completa” para revisar ou customizar o roteiro da aula.
+
+Registro de Evidências
+Utilize o campo de anotações privadas para registrar:
+
+Progresso da aula
+
+Observações técnicas
+
+Evidências pedagógicas
+
+Consolidação de Relatório
+Acione o comando de exportação para baixar o relatório estruturado em formato .txt.
+
+📁 Estrutura do Projeto
+/
+├── index.html      # Ponto de entrada e estrutura semântica
+├── style.css       # Motor de estilização e definições de tema
+├── cronograma.js   # Base de dados estruturada e lógica de datas
+├── script.js       # Controlador de eventos e persistência
+└── export.js       # Módulo de geração de relatórios externos
