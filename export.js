@@ -1,28 +1,48 @@
 function exportarAnotacoes() {
-    let texto = "CRONOGRAMA GERAÇÃO TECH - EXPORTAÇÃO DE DADOS\n";
-    texto += "==============================================\n\n";
+    const curso = document.getElementById("cursoSelect").value;
+    const turma = document.getElementById("turmaSelect").value;
+    
+    // Nome amigável para o arquivo
+    const nomeCurso = curso === "ia_gen" ? "IA Generativa" : "IA + Soft Skills";
+    const nomeTurma = turma === "terqui" ? "Terça e Quinta" : "Segunda e Quarta";
+    
+    let conteudoExportacao = `RELATÓRIO DE CRONOGRAMA - ${nomeCurso}\n`;
+    conteudoExportacao += `TURMA: ${nomeTurma}\n`;
+    conteudoExportacao += `EXPORTADO EM: ${new Date().toLocaleString('pt-BR')}\n`;
+    conteudoExportacao += `--------------------------------------------------\n\n`;
 
-    for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        // Filtra anotações, roadmaps e atividades
-        if (key.includes("aula")) {
-            const valor = localStorage.getItem(key);
-            if (valor && valor.trim() !== "") {
-                const nomeLimpo = key.replace(/-/g, " ").toUpperCase();
-                texto += `[${nomeLimpo}]\n${valor}\n`;
-                texto += "----------------------------------------------\n";
-            }
-        }
-    }
+    // Seleciona todos os cards de aula visíveis na tela
+    const aulasCards = document.querySelectorAll(".aula");
 
-    if (texto.length < 100) {
-        alert("Não há anotações ou alterações para exportar.");
+    if (aulasCards.length === 0) {
+        alert("Não há dados carregados para exportar.");
         return;
     }
 
-    const blob = new Blob([texto], { type: "text/plain" });
+    aulasCards.forEach((card) => {
+        const titulo = card.querySelector("h3").innerText;
+        const info = card.querySelector("small").innerText;
+        const data = card.querySelector(".data-tag").innerText;
+
+        // Captura os valores atuais dos textareas (que contêm suas edições salvas ou não)
+        const roadmap = card.querySelector(".input-material[id$='roadmap-input']").value;
+        const atividade = card.querySelector(".input-material[id$='atividade-input']").value;
+        const notas = card.querySelector(".input-notes").value;
+
+        conteudoExportacao += `${info} | DATA: ${data}\n`;
+        conteudoExportacao += `TEMA: ${titulo}\n`;
+        conteudoExportacao += `--------------------------------------------------\n`;
+        conteudoExportacao += `ROADMAP:\n${roadmap || "Nenhum conteúdo inserido."}\n\n`;
+        conteudoExportacao += `ATIVIDADE PRÁTICA:\n${atividade || "Nenhuma atividade definida."}\n\n`;
+        conteudoExportacao += `MINHAS ANOTAÇÕES:\n${notas || "Sem anotações para esta aula."}\n`;
+        conteudoExportacao += `\n==================================================\n\n`;
+    });
+
+    // Criação do arquivo para download
+    const blob = new Blob([conteudoExportacao], { type: "text/plain;charset=utf-8" });
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = `meu_cronograma_${new Date().toLocaleDateString()}.txt`;
+    link.download = `Cronograma_${curso}_${turma}.txt`;
     link.click();
+    URL.revokeObjectURL(link.href);
 }
